@@ -77,6 +77,8 @@ class EditProjectTypeAPIview(APIView):
 
         types.save()
 
+        return self.get(self=self,request=request,pk=pk)
+
 
     def delete(self,request,pk):
 
@@ -259,7 +261,7 @@ class EditProjectAPIview(APIView):
         project.save()
 
 
-        return ProjectAPIview.get(self=self,request=request)
+        return self.get(self=self,request=request,pk=pk)
     
 
 
@@ -274,4 +276,11 @@ class EditProjectAPIview(APIView):
         project.delete()
 
         return ProjectAPIview.get(self=self,request=request)
+    
+
+
+
+
+
+# Multiple Developer Can add into project . Multiple Developer Also neet to be remove...
     

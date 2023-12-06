@@ -19,6 +19,7 @@ class Project(models.Model):
         ("IN_TESTING", "IN_Testing"),
         ("IN_DEPLOYMENT", "IN_Deployment"),
         ("COMPLETE", "Complete"),
+        ("DEACTIVE", "Deactive"),
     ]
 
     project_name = models.CharField(max_length=500)
